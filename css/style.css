@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --hoverColor: rgba(255 255 255 / 0.6);
+  --mainTransition: all 0.3s;
+}
+body {
+  font-family: "Andika", sans-serif;
+  font-family: "Belanosima", sans-serif;
+}
+
+.loading-layer {
+  -webkit-transition: var(--mainTransition);
+  -o-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+}
+
+.spinner {
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.logo {
+  width: 35px;
+}
+
+.list-unstyled > * {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.meal-layer {
+  background-color: var(--hoverColor);
+  -webkit-transition: var(--mainTransition);
+  -o-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+}
+
+.meal:hover .meal-layer {
+  top: 0 !important;
+}
+aside {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  color: white !important;
+}
+
+input::-webkit-input-placeholder {
+  color: white !important;
+}
+
+input::-moz-placeholder {
+  color: white !important;
+}
+
+input:-ms-input-placeholder {
+  color: white !important;
+}
+
+input::-ms-input-placeholder {
+  color: white !important;
+}
+
+input::placeholder {
+  color: white !important;
+}
+input:focus {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.meal,
+i,
+li,
+.ingrediant,
+.area {
+  cursor: pointer;
+}
+.ingrediant,
+.area {
+  -webkit-transition: var(--mainTransition);
+  -o-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+}
+.ingrediant:hover,
+.area:hover {
+  background-color: var(--hoverColor);
+}
+
+.inner-side-bar li {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  padding: 5px;
+  border-radius: 8px;
+  position: relative;
+  left: -200px;
+}
+
+.inner-side-bar li:hover {
+  background-color: var(--hoverColor);
+}
